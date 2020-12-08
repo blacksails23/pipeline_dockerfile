@@ -12,9 +12,9 @@ pipeline {
         sh 'mvn package'
               }
               }
-     stage('make docker image'){
+     stage('prod){
         steps{
-          sh 'docker build --tag=build .'
+
               }
               }
 
