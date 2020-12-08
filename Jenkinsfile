@@ -14,7 +14,7 @@ pipeline {
               }
      stage('make docker image'){
         steps{
-          sh 'docker build --tag=build'
+          sh 'docker build --tag=build .'
               }
               }
 
