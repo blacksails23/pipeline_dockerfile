@@ -14,6 +14,7 @@ pipeline {
               }
      stage('docker build') {
         steps {
+        sh 'ssh root@srv01'
         sh 'cp /home/black1/pipeline_dockerfile/Dockerfile.1 /var/lib/jenkins/workspace/target'
         sh 'docker build -f Dockerfile.1 -t api:v1 /var/lib/jenkins/workspace/test1/target'
         sh 'docker push blacksail23/homework:v1'
